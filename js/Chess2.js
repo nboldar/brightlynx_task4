@@ -32,6 +32,7 @@ class Chess2 extends Chess {
             /*находим расположение коня и его координаты*/
             let element = $(event.target);
             element.addClass(this.currentPositionClassName);
+
             this.currentCellCoordinates.column = (+element.data('idx'));
             this.currentCellCoordinates.row = (+element.parent().data('idx'));
             /*находим координаты возможных ходов коня*/
