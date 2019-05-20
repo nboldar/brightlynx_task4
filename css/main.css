@@ -1,0 +1,14 @@
+.tab-column{
+    height: 50px;
+    width: 50px;
+}
+
+.chessCell{
+    border:1px solid #000000;
+}
+.chessBlackCell{
+    background-color: #000000;
+}
+.steedMoveCell{
+    background-color: #008000;
+}
