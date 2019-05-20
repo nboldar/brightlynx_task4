@@ -12,3 +12,6 @@
 .steedMoveCell{
     background-color: #008000;
 }
+.currentPosition{
+    background-color: #0000ff;
+}

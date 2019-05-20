@@ -8,6 +8,7 @@ class Chess2 extends Chess {
         this.mapMaker = mapMaker;
         this.rootElement = $("#root");// корневой элемент куда отрисовывается доска
         this.possibleMoveCellClassName = 'steedMoveCell';// имя класса для полей куда конь может пойти , модифицирет цвет на зеленый
+        this.currentPositionClassName = 'currentPosition';// имя класса для элемента - текущего положения коня модифицирет цвет на синий
     }
 
     /**
@@ -22,12 +23,15 @@ class Chess2 extends Chess {
         targetElements.on('click', (event) => {
             event.preventDefault();
             event.stopPropagation();
+
             /*очистка поля от предыдущих отображений  полей хода коня*/
             $.each(targetElements, (index, value) => {
                 $(value).removeClass(this.possibleMoveCellClassName);
+                $(value).removeClass(this.currentPositionClassName);
             });
             /*находим расположение коня и его координаты*/
             let element = $(event.target);
+            element.addClass(this.currentPositionClassName);
             this.currentCellCoordinates.column = (+element.data('idx'));
             this.currentCellCoordinates.row = (+element.parent().data('idx'));
             /*находим координаты возможных ходов коня*/
