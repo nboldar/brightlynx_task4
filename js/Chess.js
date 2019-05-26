@@ -98,7 +98,7 @@ class Chess {
                 possibleMoves.push({column: colMinus1, row: rowPlus2});
             }
         }
-        if ((currentColIdx + 1) < 8) {
+        if ((currentColIdx + 1) < 9) {
             if ((currentRowNumber - 2) > 0) {
                 possibleMoves.push({column: colPlus1, row: rowMinus2});
             }
@@ -106,7 +106,7 @@ class Chess {
                 possibleMoves.push({column: colPlus1, row: rowPlus2});
             }
         }
-        if ((currentColIdx + 2) < 8) {
+        if ((currentColIdx + 2) < 9) {
             if ((currentRowNumber - 1) > 0) {
                 possibleMoves.push({column: colPlus2, row: rowMinus1});
             }
